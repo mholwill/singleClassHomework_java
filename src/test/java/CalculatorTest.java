@@ -9,11 +9,19 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        calculator = new Calculator(3);
+        calculator = new Calculator(10, 5);
     }
 
     @Test
-    public void hasNumber(){
-        assertEquals(3, calculator.getNumber());
+    public void hasAddedFunction(){
+        assertEquals(15, calculator.getAddedNumbers());
     }
+
+    @Test
+    public void hasSubtractFunction(){
+        assertEquals(5, calculator.getSubtractedNumbers());
+    }
+
+    @Test
+    public void
 }
