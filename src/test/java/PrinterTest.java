@@ -9,19 +9,29 @@ public class PrinterTest {
 
     @Before
     public void before(){
-        printer = new Printer(40, 60);
+        printer = new Printer(200, 400);
+    }
+
+    @Test
+    public void hasPaper(){
+        assertEquals(200, printer.getPaper());
     }
 
     @Test
     public void hasPrintedPaper(){
-        printer.print(30);
-        assertEquals(10, printer.getPaper());
+        printer.print(30, 5);
+        assertEquals(50, printer.getPaper());
+    }
+
+    @Test
+    public void hasInk(){
+        assertEquals(400, printer.getInk());
     }
 
     @Test
     public void hasUsedInk(){
-        printer.print(40);
-        assertEquals(20, printer.getInk());
+        printer.print(30, 5);
+        assertEquals(250, printer.getInk());
     }
 
 

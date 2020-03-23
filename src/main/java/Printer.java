@@ -16,12 +16,11 @@ public class Printer {
         return this.ink;
     }
 
-    public int print(int copies){
-        if (this.paper >= copies) {
-            return this.paper -= copies;
-        } else {
-            return this.paper;
+    public void print(int pages, int copies){
+        int sheetsRequired = pages * copies;
+        if (sheetsRequired <= this.paper && sheetsRequired <= this.ink) {
+            this.paper -= sheetsRequired;
+            this.ink -= sheetsRequired;
         }
     }
-
 }
