@@ -24,7 +24,8 @@ public class WaterBottleTest {
 
     @Test
     public void hasMadeBottleEmpty(){
-        assertEquals(0, waterBottle.makeEmpty());
+        waterBottle.makeEmpty();
+        assertEquals(0, waterBottle.getVolume());
     }
 
     @Test
