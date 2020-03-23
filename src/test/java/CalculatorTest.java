@@ -9,7 +9,7 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        calculator = new Calculator(10, 5);
+        calculator = new Calculator(10, 5, 100.10, 50.05);
     }
 
     @Test
@@ -23,5 +23,12 @@ public class CalculatorTest {
     }
 
     @Test
-    public void
+    public void hasMultiplyFunction(){
+        assertEquals(50, calculator.multiply());
+    }
+
+    @Test
+    public void hasDivideFuunction(){
+        assertEquals(2, calculator.divide(), 0.001);
+    }
 }
