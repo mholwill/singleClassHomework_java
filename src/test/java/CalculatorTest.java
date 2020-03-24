@@ -29,6 +29,6 @@ public class CalculatorTest {
 
     @Test
     public void hasDivideFuunction(){
-        assertEquals(20, calculator.divide(100, 5), 0.001);
+        assertEquals(20, calculator.divide(100, 5), 0.01);
     }
 }
