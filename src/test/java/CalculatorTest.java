@@ -9,26 +9,26 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        calculator = new Calculator(10, 5, 100.10, 50.05);
+        calculator = new Calculator();
     }
 
     @Test
     public void hasAddedFunction(){
-        assertEquals(15, calculator.getAddedNumbers());
+        assertEquals(15, calculator.getAddedNumbers(10, 5));
     }
 
     @Test
     public void hasSubtractFunction(){
-        assertEquals(5, calculator.getSubtractedNumbers());
+        assertEquals(5, calculator.getSubtractedNumbers(10, 5));
     }
 
     @Test
     public void hasMultiplyFunction(){
-        assertEquals(50, calculator.multiply());
+        assertEquals(50, calculator.multiply(10, 5));
     }
 
     @Test
     public void hasDivideFuunction(){
-        assertEquals(2, calculator.divide(), 0.001);
+        assertEquals(20, calculator.divide(100, 5), 0.001);
     }
 }
